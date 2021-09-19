@@ -1,32 +1,40 @@
 extends includes/layout.pug
 
 block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
-
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
-        
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache: true})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+    article#post
+        .post-header
+            .title= page.title
+            .container
+                time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.posted')] #[=date(page['date'], config.date_format)] | #[=__('post.modified')] #[=date(page['updated'], config.date_format)]
+                //time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]
+                .button-hover.categories
+                    each categories,index in page.categories.data
+                        i.fa.fa-inbox.article-icon(aria-hidden="true")
+                        a.link-a(href=url_for(categories.path)) #[=categories.name]
+                        if(index < page.categories.data.length - 1)
+                            i.fa.fa-angle-right(style="margin: 0 8px;")
+                .button-hover.tags
+                    each tags,index in page.tags.data
+                        i.fa.fa-tag.article-icon(aria-hidden="true")
+                        a.link-a(href=url_for(tags.path)) #[=tags.name]
+                        if(index < page.tags.data.length - 1)
+                            span &nbsp;|&nbsp;
+        .main-content!= page.content
+        if (theme.post_copyright && theme.post_copyright.enable)
+            .post-copyright
+                .post-copyright-author
+                    span.post-copyright-meta= _p('post.copyright.author') + ": "
+                    span.post-copyright-info
+                        - let mailto = `mailto:${config.email}`
+                        a(href=mailto) #[=config.author]
+                .post-copyright-type
+                    span.post-copyright-meta= _p('post.copyright.link') + ": "
+                    span.post-copyright-info
+                        a(href=url_for(page.permalink)) #[=page.permalink]
+                .post-copyright-notice
+                    span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
+                    span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
+        if (theme.comments.enable)
+            include ./includes/comments/index.pug
+    include includes/pagination.pug
+    //div!= paginator()
