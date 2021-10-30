@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2021/09/22/hexo/</loc>
+    <loc>http://example.com/2021/09/22/Java%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86-0/</loc>
     
     <lastmod>2021-10-30</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2021/09/22/java%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86/</loc>
+    <loc>http://example.com/2021/09/22/hexo/</loc>
     
     <lastmod>2021-10-30</lastmod>
     
@@ -46,7 +46,7 @@
 
   
   <url>
-    <loc>http://example.com/tags/Markdown/</loc>
+    <loc>http://example.com/tags/hexo/</loc>
     <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -60,7 +60,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/hexo/</loc>
+    <loc>http://example.com/tags/Markdown/</loc>
     <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -69,7 +69,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/Markdown/</loc>
+    <loc>http://example.com/categories/hexo/</loc>
     <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/hexo/</loc>
+    <loc>http://example.com/categories/Markdown/</loc>
     <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-22T14:18:59.851Z</updated>
+  <updated>2021-10-30T07:35:56.610Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,55 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>hexo-Markdown</title>
-    <link href="http://example.com/2021/09/22/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
-    <id>http://example.com/2021/09/22/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</id>
-    <published>2021-09-22T13:56:10.000Z</published>
-    <updated>2021-09-22T14:18:59.851Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="为一级标题"><a href="#为一级标题" class="headerlink" title="#为一级标题"></a>#为一级标题</h1><h2 id="为二级标题，依次类推"><a href="#为二级标题，依次类推" class="headerlink" title="##为二级标题，依次类推"></a>##为二级标题，依次类推</h2><p>hello 一行 <strong>末尾</strong> 加两个及以上空格为换行   dfs</p><p><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong>粗体文本</strong></p><hr><p>3+个* 或 3+个- 为分隔线</p><hr><hr><p><del>删除线</del> 前后加~~</p><p><u> 我是下划线</u></p><p>我是 <a href="%E5%9B%B4%E6%AE%B4">^jio</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;为一级标题&quot;&gt;&lt;a href=&quot;#为一级标题&quot; class=&quot;headerlink&quot; title=&quot;#为一级标题&quot;&gt;&lt;/a&gt;#为一级标题&lt;/h1&gt;&lt;h2 id=&quot;为二级标题，依次类推&quot;&gt;&lt;a href=&quot;#为二级标题，依次类推&quot; class=&quot;headerlink</summary>
-      
-    
-    
-    
-    <category term="Markdown" scheme="http://example.com/categories/Markdown/"/>
-    
-    
-    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java静态代理</title>
-    <link href="http://example.com/2021/09/22/java%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86/"/>
-    <id>http://example.com/2021/09/22/java%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86/</id>
-    <published>2021-09-22T13:56:10.000Z</published>
-    <updated>2021-10-30T07:32:23.923Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Java静态代理"><a href="#Java静态代理" class="headerlink" title="Java静态代理"></a>Java静态代理</h1><p>静态代理相对于正常代码来说，相当于加了一个业务层，增加代码灵活性。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">homework</span> <span class="keyword">implements</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;家中学习！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">schoolwork</span> <span class="keyword">implements</span> <span class="title">word</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;学校学习.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如果要修改homework 和 schoolwork 中study输出的语句则要修改已经提交的代码，组中其他人已经在使用的代码，很不友好</p><p>就需要使用动态代理，提高代码的灵活性</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">proxywork</span> <span class="keyword">implements</span> <span class="title">work</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    homework hw;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">proxywork</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.hw = <span class="keyword">new</span> homework();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Stytem.out.printlen(<span class="string">&quot;周末&quot;</span>);</span><br><span class="line">        hw.study();</span><br><span class="line">        Stytem.out.printlen(<span class="string">&quot;开心&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">homework</span> <span class="keyword">implements</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;家中学习！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">schoolwork</span> <span class="keyword">implements</span> <span class="title">word</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;学校学习.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        proxywork pw = <span class="keyword">new</span> proxywork();</span><br><span class="line">        pw.study();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Java静态代理&quot;&gt;&lt;a href=&quot;#Java静态代理&quot; class=&quot;headerlink&quot; title=&quot;Java静态代理&quot;&gt;&lt;/a&gt;Java静态代理&lt;/h1&gt;&lt;p&gt;静态代理相对于正常代码来说，相当于加了一个业务层，增加代码灵活性。&lt;/p&gt;
-&lt;figure </summary>
-      
-    
-    
-    
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
-    
-  </entry>
   
   <entry>
     <title>hexo-Markdown</title>
@@ -86,6 +37,55 @@
     
     
     <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java静态代理</title>
+    <link href="http://example.com/2021/09/22/Java%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86-0/"/>
+    <id>http://example.com/2021/09/22/Java%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86-0/</id>
+    <published>2021-09-22T13:56:10.000Z</published>
+    <updated>2021-10-30T07:41:55.523Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java静态代理"><a href="#Java静态代理" class="headerlink" title="Java静态代理"></a>Java静态代理</h1><p>静态代理相对于正常代码来说，相当于加了一个业务层，增加代码灵活性。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">homework</span> <span class="keyword">implements</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;家中学习！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">schoolwork</span> <span class="keyword">implements</span> <span class="title">word</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;学校学习.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如果要修改homework 和 schoolwork 中study输出的语句则要修改已经提交的代码，组中其他人已经在使用的代码，很不友好</p><p>就需要使用动态代理，提高代码的灵活性</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">proxywork</span> <span class="keyword">implements</span> <span class="title">work</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    homework hw;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">proxywork</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.hw = <span class="keyword">new</span> homework();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Stytem.out.printlen(<span class="string">&quot;周末&quot;</span>);</span><br><span class="line">        hw.study();</span><br><span class="line">        Stytem.out.printlen(<span class="string">&quot;开心&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">homework</span> <span class="keyword">implements</span> <span class="title">work</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;家中学习！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">schoolwork</span> <span class="keyword">implements</span> <span class="title">word</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.printlen(<span class="string">&quot;学校学习.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        proxywork pw = <span class="keyword">new</span> proxywork();</span><br><span class="line">        pw.study();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Java静态代理&quot;&gt;&lt;a href=&quot;#Java静态代理&quot; class=&quot;headerlink&quot; title=&quot;Java静态代理&quot;&gt;&lt;/a&gt;Java静态代理&lt;/h1&gt;&lt;p&gt;静态代理相对于正常代码来说，相当于加了一个业务层，增加代码灵活性。&lt;/p&gt;
+&lt;figure </summary>
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-Markdown</title>
+    <link href="http://example.com/2021/09/22/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    <id>http://example.com/2021/09/22/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</id>
+    <published>2021-09-22T13:56:10.000Z</published>
+    <updated>2021-09-22T14:18:59.851Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="为一级标题"><a href="#为一级标题" class="headerlink" title="#为一级标题"></a>#为一级标题</h1><h2 id="为二级标题，依次类推"><a href="#为二级标题，依次类推" class="headerlink" title="##为二级标题，依次类推"></a>##为二级标题，依次类推</h2><p>hello 一行 <strong>末尾</strong> 加两个及以上空格为换行   dfs</p><p><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong>粗体文本</strong></p><hr><p>3+个* 或 3+个- 为分隔线</p><hr><hr><p><del>删除线</del> 前后加~~</p><p><u> 我是下划线</u></p><p>我是 <a href="%E5%9B%B4%E6%AE%B4">^jio</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;为一级标题&quot;&gt;&lt;a href=&quot;#为一级标题&quot; class=&quot;headerlink&quot; title=&quot;#为一级标题&quot;&gt;&lt;/a&gt;#为一级标题&lt;/h1&gt;&lt;h2 id=&quot;为二级标题，依次类推&quot;&gt;&lt;a href=&quot;#为二级标题，依次类推&quot; class=&quot;headerlink</summary>
+      
+    
+    
+    
+    <category term="Markdown" scheme="http://example.com/categories/Markdown/"/>
+    
+    
+    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
     
   </entry>
   
